@@ -9,10 +9,10 @@ sudo apt-get update
 To get this repository, run the following command inside your git enabled terminal
 ```bash
 git clone ([https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png](https://github.com/crazylot/upload-images-on-s3.git))
-
+```
 You will need django to be installed in you computer to run this app. Head over to https://www.djangoproject.com/download/ for the download guide
-
 Download django usig pip
+
 ```bash
 sudo apt install python3-pip -y
 ```
@@ -22,19 +22,22 @@ pip install django
 Once you have downloaded django, go to the cloned repo directory and run the following command
 
 ```bash
+cd upload-images-on-s3
+pip install -r requirements.txt
 python3 manage.py makemigrations
 ```
 
-This will create all the migrations file (database migrations) required to run this App.
+This will install all necessary librarries and create all the migrations file (database migrations) required to run this App.
 
 Now, to apply this migrations run the following command
 ```bash
 python3 manage.py migrate
 ```
 
-One last step and then our todo App will be live. We need to create an admin user to run this App. On the terminal, type the following command and provide username, password and email for the admin user
+One last step and then our app will be live. We need to create an admin user to run this App. On the terminal, type the following command and provide username, password and email for the admin user
+
 ```bash
-python3 manage.py createsuperuser
+python3 manage.py createsuperuserwithpassword --username admin --password admin --email admin@example.org --preserve
 ```
 
 That was pretty simple, right? Now let's make the App live. We just need to start the server now and then we can start using our App. Start the server by following command
