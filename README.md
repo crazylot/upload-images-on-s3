@@ -1,5 +1,5 @@
 # django-image-upload-app
-A simple app to upload images on AWS S3 built with django
+A simple app to upload images on AWS S3 built with django. Below Process describes how to run this project on an AWS EC2 server. OS used for EC2 server is Ubuntu.
 
 ### Setup
 Update the System
@@ -8,30 +8,8 @@ sudo apt-get update
 ```
 To get this repository, run the following command inside your git enabled terminal
 ```bash
-git clone # django-todo
-A simple todo app built with django
+git clone ([https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png](https://github.com/crazylot/upload-images-on-s3.git))
 
-![todo App](https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png)
-### Setup
-Update the System
-```bash
-sudo apt-get update
-```
-To get this repository, run the following command inside your git enabled terminal
-```bash
-git clone # django-todo
-A simple app to upload images on AWS S3 built with django
-
-![todo App](https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png)
-### Setup
-Update the System
-```bash
-sudo apt-get update
-```
-To get this repository, run the following command inside your git enabled terminal
-```bash
-git clone [https://github.com/yeshwanthlm/django-on-ec2.git](https://github.com/crazylot/upload-images-on-s3.git)
-```
 You will need django to be installed in you computer to run this app. Head over to https://www.djangoproject.com/download/ for the download guide
 
 Download django usig pip
@@ -62,9 +40,9 @@ python3 manage.py createsuperuser
 That was pretty simple, right? Now let's make the App live. We just need to start the server now and then we can start using our App. Start the server by following command
 
 ```bash
-python3 manage.py runserver
+python3 manage.py runserver 0.0.0.0:8000
 ```
 
-Once the server is hosted, head over to http://127.0.0.1:8000/todos for the App.
+Once the server is hosted, click on the public url of your EC2 machine. You also need to create a security group for your EC2 machine to allow traffic on port 8000 of your EC2 machine.
 
 Cheers and Happy Coding :)
