@@ -8,7 +8,7 @@ sudo apt-get update
 ```
 To get this repository, run the following command inside your git enabled terminal
 ```bash
-git clone ([https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png](https://github.com/crazylot/upload-images-on-s3.git))
+git clone https://github.com/crazylot/upload-images-on-s3.git
 ```
 You will need django to be installed in you computer to run this app. Head over to https://www.djangoproject.com/download/ for the download guide
 Download django usig pip
@@ -39,6 +39,17 @@ One last step and then our app will be live. We need to create an admin user to 
 ```bash
 python3 manage.py createsuperuserwithpassword --username admin --password admin --email admin@example.org --preserve
 ```
+
+Now, Edit your .env file
+
+```bash
+nano .env
+```
+
+Change the file by entering values for these 3 enviornment varaiable :-> AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_STORAGE_BUCKET_NAME.
+press ctr + o , then enter and then ctr +x to return to your shell
+
+Also edit settings.py file  and change ALLOWED_HOSTS  settings to ['*'] or enter the pubic address of your EC2 machine in allowed host section.
 
 That was pretty simple, right? Now let's make the App live. We just need to start the server now and then we can start using our App. Start the server by following command
 
